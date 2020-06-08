@@ -11,6 +11,10 @@
 .top-section {
     background: #15639a;
     padding: 20px;
+    color: white;
+}
+p#link-created a {
+    color: white;
 }
 .shorten-button {
     height: 58px;

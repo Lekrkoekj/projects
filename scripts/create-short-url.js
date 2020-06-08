@@ -5,10 +5,14 @@ function CreateShortURL() {
     var data = "{\"allowDuplicates\":false,\"domain\":\"l.lekr.ml\",\"originalURL\":\"" + originalUrl + "\",\"path\":\"" +  customPath + "\"}";
 
     var xhr = new XMLHttpRequest();
-
     xhr.addEventListener("readystatechange", function () {
     if (this.readyState === this.DONE) {
         console.log(this.responseText);
+        
+        var generatedLink = this.responseText.split('"');
+        
+        document.getElementById("link-created").innerHTML = 'Your generated link is: <a href="' + generatedLink[33] + '">' + generatedLink[33];
+
     }
     });
 
@@ -18,4 +22,5 @@ function CreateShortURL() {
     xhr.setRequestHeader("authorization", "0hszljKvdK9p9ifXFbZEuAplkNO72K4E");
 
     xhr.send(data);
+    
 }
