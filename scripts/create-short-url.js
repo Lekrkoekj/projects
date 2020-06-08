@@ -1,11 +1,19 @@
+function CopyShortURL() {
+    var shortenedLink = document.getElementById("shortened-link");
+    shortenedLink.select();
+    shortenedLink.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("URL copied!");
+}
+
 function CreateShortURL() {
     var originalUrl = document.getElementById("original-url").value;
-    var customPath = document.getElementById("custom-path").value;
+var customPath = document.getElementById("custom-path").value;
     if (document.getElementById("original-url").value.length == 0) {
-        document.getElementById("link-created").innerHTML = "Please enter a URL to shorten.";
+        document.getElementById("error-text").innerHTML = "Please enter a URL to shorten.";
     }
     else if (document.getElementById("original-url").value.includes(" ") || document.getElementById("custom-path").value.includes(" ")) {
-        document.getElementById("link-created").innerHTML = "URLs can not have spaces in them.";
+        document.getElementById("error-text").innerHTML = "URLs can not have spaces in them.";
     }
     else {
         var data = "{\"allowDuplicates\":false,\"domain\":\"l.lekr.ml\",\"originalURL\":\"" + originalUrl + "\",\"path\":\"" +  customPath + "\"}";
@@ -17,14 +25,14 @@ function CreateShortURL() {
             
             var generatedLink = this.responseText.split('"');
             
-            document.getElementById("link-created").innerHTML = 'Your generated link is: <a href="' + generatedLink[33] + '">' + generatedLink[33];
+            document.getElementById("shortened-link").value = generatedLink[33];
 
             if(this.responseText.includes("Link already exists")) {
-                document.getElementById("link-created").innerHTML = "This shortened link already exists! Please use something else or leave empty to randomize.";
+                document.getElementById("error-text").innerHTML = "This shortened link already exists! Please use something else or leave empty to randomize.";
                 return;
             }
             if(generatedLink[33] == "public") {
-                document.getElementById("link-created").innerHTML = "This combination of URL and custom short URL already exists!"
+                document.getElementById("error-text").innerHTML = "This combination of URL and custom short URL already exists!"
             }
         }
         });

@@ -1,8 +1,9 @@
-.url-input {
+.url-input, .url-input:disabled {
     padding: 20px;
     width: 50%;
     border-radius: 5px 0px 0px 5px;
     border: 1px solid #5facea;
+    background: white;
     font-family: Lato;
 }
 .url-input.custom {
@@ -13,8 +14,11 @@
     padding: 20px;
     color: white;
 }
-p#link-created a {
+p#error-text a {
     color: white;
+}
+p#error-text {
+    font-weight: bold;
 }
 .shorten-button {
     height: 58px;
@@ -26,6 +30,7 @@ p#link-created a {
     padding: 0px 30px;
     cursor: pointer;
     transition: 0.2s;
+    width: 134.38px;
 }
 .shorten-button:hover {
     background: #68bdff;
