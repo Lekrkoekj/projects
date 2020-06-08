@@ -1,0 +1,37 @@
+.url-input {
+    padding: 20px;
+    width: 50%;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid #5facea;
+    font-family: Lato;
+}
+.url-input.custom {
+    border-radius: 0px 5px 5px 0px;
+}
+.top-section {
+    background: #15639a;
+    padding: 20px;
+}
+.shorten-button {
+    height: 58px;
+    border: 0;
+    background: #5facea;
+    border-radius: 0px 5px 5px 0px;
+    color: white;
+    font-family: Lato;
+    padding: 0px 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.shorten-button:hover {
+    background: #68bdff;
+}
+.custom-url-pretext {
+    color: #ffffff;
+    border-radius: 5px 0px 0px 5px;
+    padding: 20px;
+    border: 1px solid #5facea;
+    font-family: Lato;
+    width: 134.38px;
+    background-color: #5facea;
+}
