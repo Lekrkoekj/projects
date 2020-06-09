@@ -1,0 +1,10 @@
+.top-section {
+    background: #5facea;
+    color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 40px;
+}
+.top-section a {
+    color: white;
+}
