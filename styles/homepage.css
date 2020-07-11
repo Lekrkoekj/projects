@@ -29,3 +29,21 @@
     font-size: 46px;
     margin: 15px;
 }
+@media only screen and (max-width: 930px) {
+    .second-part {
+        display: none;
+    }
+    .top-section {
+        grid-template-columns: 100%;
+    }
+}
+@media only screen and (max-width: 570px) {
+    div[style="display: grid; grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);"] {
+        grid-template-columns: 50% 50% !important;
+    }
+}
+@media only screen and (max-width: 385px) {
+    div[style="display: grid; grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);"] {
+        grid-template-columns: 100% !important;
+    }
+}
