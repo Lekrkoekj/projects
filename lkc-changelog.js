@@ -1,5 +1,5 @@
 document.getElementById("lkc-changelog").onload = LKCChangelog();
 
 function LKCChangelog() {
-    document.getElementById("lkc-changelog").innerHTML = '<p>Note: This game is currently only available in Dutch! Support for English will be added soon.</p><h1 style="text-align: center;">New in Version 1.2:</h1><p>Brand new UI added!</p><p>Added Quests!</p><p>Added KoekjCoins!</p><p>Powerups added! There are currently 2 powerups, more will be added later.</p><p>Bugfixes.</p><h1 style="text-align: center;">v1.2.1:</h1><p>More bugfixes.</p>'
+    document.getElementById("lkc-changelog").innerHTML = '<h1 style="text-align: center; color: white;">New in Version 1.3:</h1><p>English Translation added</p><p>Language settings added to the Settings menu.</p><p>Added music and SFX sliders to the Settings menu.</p><p>The \'Have 1.000.000 Cookies\' quest now works normally</p><p>Removed the fade-in of the music so the Music slider works.</p><p>The game new restarts after resetting your data.</p><p>Fixed the scaling of the Settings menu so more things fit.</p>'
 }
