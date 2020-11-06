@@ -1,0 +1,5 @@
+document.getElementById("lks-changelog").onload = LKSChangelog();
+
+function LKSChangelog() {
+    document.getElementById("lks-changelog").innerHTML = '<h1 style="text-align: center; color: white;">New in Version 0.3:</h1><p>Redesigned the UI.</p><p>The LKG logo now shows up on the splash screen.</p><p>Added coins to all the levels.</p><p>A sound will now play when gravity switches.</p><p>Changed normal gravity slightly.</p><p>Lowered jump height slightly.</p><p>Added Level 1 of World 2 (not done yet).</p><p>Replaced the Levels section with a 3D world map.</p><h1 style="text-align: center; color: white;">Bugfixes:</h1><p>Jumping in upside-down gravity works normally now.</p><p>Holding the touch controls while completing/exiting a level will no longer cause the player to move by itself on the main menu.</p>'
+}
