@@ -1,38 +1,50 @@
 body {
     margin: 0;
-    color: #595959;
+    color: #202d4a;
     font-family: Lato;
+    letter-spacing: -0.5px;
     font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: Nexa;
+    font-family: Avenir;
+    letter-spacing: -1px;
 }
 button.normal {
-    background: #5facea;
-    color: white;
+    background: #f6f6f6;
+    color: #202d4a;
     border: 0;
-    box-shadow: 0px 2px 7px 0px #0000001a;
+    box-shadow: 0px 2px 7px 0px #202d4a26;
     cursor: pointer;
-    font-size: 16px;
-    font-family: Lato;
+    font-size: 18px;
+    font-family: Avenir;
     padding: 20px;
     border-radius: 5px;
     transition: 0.2s;
+    letter-spacing: -0.5px;
+    line-height: 32px;
+    width: 178px;
+}
+button.normal img {
+    width: 100%;
+    max-width: 138px;
 }
 .homepage-grid button.normal {
     margin: 10px;
 }
 button.normal:hover {
-    box-shadow: 0px 2px 7px 0px #0000004a;
+    box-shadow: 0px 2px 7px 0px #202d4a40;
     transform: translate(0px, -5px);
 }
 nav li {
     float: right;
     border-top: 3px solid transparent;
     transition: 0.2s;
-    font-family: Lato;
-    padding: 20px;
-    color: #363647;
+    font-family: Avenir;
+    font-weight: bold;
+    padding: 18px 20px;
+    color: #202d4a;
+    letter-spacing: -0.5px;
+    font-size: 18px;
 }
 nav .logo {
     float: left;
@@ -43,7 +55,7 @@ nav .logo img {
     height: 62px;
 }
 nav li:hover {
-    border-top-color: #5facea
+    border-top-color: #395083;
 }
 nav ul {
     list-style-type: none;
@@ -55,8 +67,12 @@ nav {
     height: 62px;
 }
 @font-face {
-    font-family: Nexa;
-    src: url("/fonts/NexaBold.otf") format("opentype"), url("/fonts/NexaRegular.otf") format("opentype"), url("/fonts/NexaLight.otf") format("opentype")
+    font-family: Avenir;
+    src: url("/fonts/AvenirBold.otf") format("opentype"), url("/fonts/AvenirRegular.otf") format("opentype"), url("/fonts/AvenirLight.otf") format("opentype")
+}
+@font-face {
+    font-family: Avenir;
+    src: url("/fonts/Avenir.ttf") format("truetype")
 }
 
 /* Categories */
@@ -112,7 +128,7 @@ nav {
     max-width: 162px;
     width: 100%;
     background: white;
-    font-family: Nexa;
+    font-family: Avenir;
     transition: 0.3s;
     box-shadow: 0px 4px 30px 0px rgba(34,56,101,0.1);   
 }
@@ -174,7 +190,7 @@ button#fullscreen {
     position: absolute;
     border-radius: 0px 0px 5px 0px;
     background: #ffffffe3;
-    font-family: Nexa;
+    font-family: Avenir;
     font-size: 16px;
     padding: 20px;
     cursor: pointer;
@@ -203,4 +219,23 @@ div#container object, div#container iframe {
 .lkd-links {
     display: grid;
     grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #131719;
+        color: #e8e8e8;
+    }
+    nav li {
+        color: #e8e8e8;
+    }
+    nav li:hover {
+        border-top-color: #e8e8e8;
+    }
+    button.normal {
+        background: #1b2022;
+        color: #e8e8e8;
+    }
+    button.normal:hover {
+        color: white;
+    }
 }
