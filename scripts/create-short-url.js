@@ -25,7 +25,7 @@ var customPath = document.getElementById("custom-path").value;
             
             var generatedLink = this.responseText.split('"');
             
-            document.getElementById("shortened-link").value = generatedLink[35];
+            document.getElementById("shortened-link").value = generatedLink[57];
 
             if(this.responseText.includes("Link already exists")) {
                 document.getElementById("error-text").innerHTML = "This shortened link already exists! Please use something else or leave empty to randomize.";

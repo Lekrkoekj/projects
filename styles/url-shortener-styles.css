@@ -44,3 +44,17 @@ p#error-text {
     width: 134.38px;
     background-color: #5facea;
 }
+@media (prefers-color-scheme: dark) {
+    .top-section {
+        background: #1b2022;
+    }
+    .url-input, .custom-url-pretext {
+        border-color: #323639;
+    }
+    .shorten-button, .custom-url-pretext {
+        background: #323639;
+    }
+    .shorten-button:hover {
+        background: #505558;
+    }
+}
