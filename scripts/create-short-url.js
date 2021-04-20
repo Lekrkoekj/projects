@@ -16,7 +16,7 @@ var customPath = document.getElementById("custom-path").value;
         document.getElementById("error-text").innerHTML = "URLs can not have spaces in them.";
     }
     else {
-        var data = "{\"allowDuplicates\":false,\"domain\":\"l.lekr.xyz\",\"originalURL\":\"" + originalUrl + "\",\"path\":\"" +  customPath + "\"}";
+        var data = "{\"allowDuplicates\":false,\"domain\":\"l.lekr.site\",\"originalURL\":\"" + originalUrl + "\",\"path\":\"" +  customPath + "\"}";
 
         var xhr = new XMLHttpRequest();
         xhr.addEventListener("readystatechange", function () {
