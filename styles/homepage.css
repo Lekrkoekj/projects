@@ -29,6 +29,10 @@
     font-size: 46px;
     margin: 15px;
 }
+.homepage-grid#items4 {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
 .homepage-grid#items3 {
     display: grid;
     grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
