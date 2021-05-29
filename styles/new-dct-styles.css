@@ -18,7 +18,6 @@ div#part2 {
     background: #00000029;
     padding: 20px;
     color: white;
-    height: 99vh;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: Kumbh Sans;
@@ -29,6 +28,25 @@ div#part1 img {
 }
 div#part1 center {
     padding: calc(100vh / 2 - 635px / 3) 0px;
+    animation: text-fade-in 1s linear;
+}
+div#textanimationpart1 {
+    opacity: 0;
+    animation: text-fade-in 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
+div#textanimationpart2 {
+    opacity: 0;
+    animation: text-fade-in 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+}
+div#textanimationpart3 {
+    opacity: 0;
+    animation: text-fade-in 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.9s;
 }
 h1#logo-text {
     margin: 0;
@@ -81,16 +99,18 @@ button#join:hover {
     .whatwehave-container {
         display: none;
     }
+    
 }
-@media only screen and (min-width: 1101px) {
-    .main-split {
-        display: grid !important;
-        grid-template-columns: 25% 75%!important;
-    }
-}
-@media only screen and (max-width: 1100px) {
-    .main-split {
-        display: block  !important;
+@media only screen and (max-width: 1000px) {
+    div#main-split {
+        display: grid;
         grid-template-columns: 100%!important;
     }
+    div#part1 center {
+        padding: 20px;
+    }
+}
+@keyframes text-fade-in {
+    0% {transform: translateY(+10px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
 }
