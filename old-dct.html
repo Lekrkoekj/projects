@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|PT+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <title>DiscordTech</title>
+    <meta name="description" content="The DiscordTech community page."/>
+        <meta property="og:image" content="https://lekr.site/images/dct-bot-icon.png"/>
+        <meta property="og:image:secure_url" content="https://lekr.site/images/dct-bot-icon.png" />
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="/styles/dct-styles.css">
+    <!-- Scripts -->
+    <script src="/scripts/mobile.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <a href="/"><li class="logo"><img src="/images/me.png"></li></a>
+            <a href="/"><li>My Projects</li></a>
+        </ul>
+    </nav>
+      <!-- Site Container-->
+    <div class="site-container">
+        <div class="dct-home">
+            <div class="dark-overlay">
+                <div class="home-section centered">
+                    <center><img src="/images/dct-bot-icon-animated.gif" class="dct-home-img"></center>
+                <h1>DiscordTech</h1>
+                <p>Interested in technology? Join DiscordTech! DiscordTech is a highly engaged tech community that has a lot to offer.</p>
+                <center><a href="/dct-invite"><button>Join now!</button></a><a href="#announcements"><button>Announcements</button></a><a href="#whatwehave"><button>What do we have?</button></a></center>
+                </div>
+            </div>
+        </div>
+        <div id="announcements">
+            <center><h1>Announcements</h1></center>
+            <h2>New server icon! - 09-13-2020</h2>
+            <p>We have a new server and bot icon!</p>
+        </div>
+        <div class="white-container" id="whatwehave">
+            <div class="home-grid">
+                <center><h1>What do we have?</h1></center>
+                <div class="grid-div">
+                    <center><div class="grid-item"><center><img src="https://discordapp.com/assets/54b027c5a0fdb9c92545820e12544ab4.svg"><p>Channels to talk about tech!</p></center></div></center>
+                    <center><div class="grid-item"><center><img src="https://discordapp.com/assets/df8b5c1e4abb97e748071aeb28f1ba38.svg"><p>Get general Tech or Programming support!</p></center></div></center>
+                    <center><div class="grid-item"><center><img src="https://discordapp.com/assets/7be2358758e81e1ab253eb071a9527c7.svg"><p>Community events!</p></center></div></center>
+                    <center><div class="grid-item"><center><img src="https://discordapp.com/assets/3e531d8e171629e9433db0bb431b2e12.svg"><p>Weekly tech questions with server prizes!</p></center></div></center>
+                    <center><div class="grid-item"><center><img src="https://discordapp.com/assets/3c717b0d164f2435d4c46ec2fbdd7363.svg"><p>Partnerships!</p></center></div></center>
+                    <center><div class="grid-item"><center><img src="https://discordapp.com/assets/b052a4bef57c1aa73cd7cff5bc4fb61d.svg"><p>Giveaways!</p></center></div></center>
+                </div>
+            </div>
+            <center><div class="whatwehave-container"></center></div>
+        </div>
+    </div>
+</body>
+
+<style>
+    div#announcements {
+        background: white;
+        padding: 10px;
+    }
+    .home-grid {
+        padding: 10px;
+    }
+    .grid-div {
+        display: grid;
+        grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+    }
+    div#whatwehave {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        background: white;
+    }
+    div#dctb {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+    }
+    .grid-item {
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0px 4px 30px 0px rgba(34,56,101,0.1);
+        margin: 20px;
+    }
+    .grid-item p {
+        font-weight: bold;
+        font-family: Lato;
+    }
+    .white-container h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .grid-item img {
+        width: 150px;
+        margin: 30px;
+        filter: drop-shadow(0px 4px 30px rgba(34,56,101,0.1));
+    }
+    footer {
+        background: #567717;
+    }
+    .home-section button:hover {
+        color: #567717;
+    }
+    .whatwehave-container {
+        width: 832px;
+        height: 640px;
+        box-shadow: 0px 4px 30px 0px rgba(34,56,101,0.1);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        animation: whatwehave-background 20s linear infinite;
+        animation-fill-mode: forwards;
+        background-image: url(https://i.imgur.com/OHXnwEL.png);
+        background-size: cover;
+    }
+    .whatwehave-container img {
+        height: 640px;
+    }
+    @keyframes whatwehave-background {
+        0% {background-image: url(https://i.imgur.com/OHXnwEL.png);}
+        32% {background-image: url(https://i.imgur.com/OHXnwEL.png);}
+        33% {background-image: url(https://i.imgur.com/rFfckbA.png);}
+        66% {background-image: url(https://i.imgur.com/rFfckbA.png);}
+        67% {background-image: url(https://i.imgur.com/jJJdr8h.png);}
+        100% {background-image: url(https://i.imgur.com/jJJdr8h.png);}
+    }
+    @media only screen and (max-width: 1862px) {
+    div#whatwehave {
+            grid-template-columns: auto;
+        }
+        .whatwehave-container {
+            display: none;
+        }
+        .grid-item {
+            width: 250px;
+        }
+    }
+    @media only screen and (max-width: 1012px) {
+        .grid-div {
+            grid-template-columns: auto;
+        }
+    }
+</style>
+</html>
