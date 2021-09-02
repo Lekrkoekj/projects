@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Filter Geneator</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend&family=Roboto+Mono&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="https://lekr.site/images/me.png"/>
+        <meta property="og:image:secure_url" content="https://lekr.site/images/me.png"/>
+        <meta name="description" content="CSS Filter Generator."/>
+        <link rel="stylesheet" href="/styles/filter-gen-styles.css">
+        
+    </head>
+
+    <body>
+        <header>
+
+        </header>
+        <center><h1>CSS Filter Generator</h1></center>
+        <div class="mainpage">
+            <div id="right-side">
+                <!--<input type="file" id="upload" onchange="ChangeImage()">-->
+                <p>Enter Image URL:</p>
+                <input type="url" id="urlInput">
+                <center><img src="/images/me.png" id="image-output"></center>
+                <div class="codefield">
+                    <h2>Your code:</h2>
+                    <span id="chromeCode"></span>
+                    <br>
+                    <span id="safariCode"></span>
+                    <br>
+                    <span id="firefoxCode"></span>
+                </div>
+            </div>
+
+            <div id="left-side">
+                <div class="textAndValue">
+                    <p id="blurText">Blur:</p>
+                    <input type="number" min="0" max="100" step="0.1" id="blurValueText" placeholder="0-100" class="numberValue">
+                </div>
+                <input type="range" min="0" max="100" value="0" class="slider" step="0.1" id="blurSlider">
+                
+                <div class="textAndValue">
+                    <p id="hueText">Hue Rotate:</p>
+                    <input type="number" min="0" max="360" step="0.1" id="hueValueText" placeholder="0-360" class="numberValue">
+                </div>
+                <input type="range" min="0" max="360" value="0" class="slider" step="0.1" id="hueSlider">
+
+                <div class="textAndValue">
+                    <p id="brightnessText">Brightness:</p>
+                    <input type="number" min="0" max="10" step="0.01" id="brightnessValueText" placeholder="0-10" class="numberValue">
+                </div>
+                <input type="range" min="0" max="10" value="0" class="slider" step="0.01" id="brightnessSlider">
+
+                <div class="textAndValue">
+                    <p id="grayscaleText">Grayscale:</p>
+                    <input type="number" min="0" max="1" step="0.01" id="grayscaleValueText" placeholder="0-1" class="numberValue">
+                </div>
+                <input type="range" min="0" max="1" value="0" class="slider" step="0.01" id="grayscaleSlider">
+
+                <div class="textAndValue">
+                    <p id="saturationText">Saturation:</p>
+                    <input type="number" min="0" max="10" step="0.01" id="saturationValueText" placeholder="0-10" class="numberValue">
+                </div>
+                <input type="range" min="0" max="10" value="0" class="slider" step="0.01" id="saturationSlider">
+
+                <div class="textAndValue">
+                    <p id="contrastText">Contrast:</p>
+                    <input type="number" min="0" max="10" step="0.01" id="contrastValueText" placeholder="0-10" class="numberValue">
+                </div>
+                <input type="range" min="0" max="10" value="0" class="slider" step="0.01" id="contrastSlider">
+
+                <div class="textAndValue">
+                    <p id="invertText">Invert:</p>
+                    <input type="number" min="0" max="1" step="0.01" id="invertValueText" placeholder="0-10" class="numberValue">
+                </div>
+                <input type="range" min="0" max="1" value="0" class="slider" step="0.01" id="invertSlider">
+            </div>
+
+            
+        </div>
+        <script src="scripts/filter-generator.js"></script>
+    </body>
+
+</html>
