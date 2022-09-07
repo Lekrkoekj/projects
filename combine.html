@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Beat Saber Map Combiner</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A tool to combine difficulties from Beat Saber maps, made by Lekrkoekj.">
+        <script src="/scripts/bs-map-combiner-script.js"></script>
+        <link rel="stylesheet" href="/styles/combiner-styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&amp;family=PT+Sans&amp;display=swap" rel="stylesheet">
+    </head>
+    <body onload="init()">
+        <center><h1>Beat Saber Map Combiner</h1></center>
+        <div id="main-split-view">
+            <div class="file-inside">
+                <label>Original difficulty: <input id="fileInput1" type="file" name="file1" onchange="readFile1()" accept=".dat,.json,.txt"/></label>
+                <pre id="fileContent1"></pre>
+            </div>
+            <div id="middle-arrow"><img src="https://pic.onlinewebfonts.com/svg/img_68680.png"></div>
+            <div class="file-inside">
+                <label>Target difficulty: <input id="fileInput2" type="file" name="file2" onchange="readFile2()" accept=".dat,.json,.txt"/></label>
+                <pre id="fileContent2"></pre>
+            </div>
+        </div>
+        
+        <div id="settings-split-view">
+            <div>
+                <h2>V3 Settings:</h2>
+                <label title="I'm dumb so there's currently no way to merge customData, you can only override it. Inlcudes things like bookmarks and Noodle/Chroma stuff"><input checked type="checkbox" id="customDataCheckbox"/> Override customData</label><br>
+                <label title="BPM changes I guess?"><input checked type="checkbox" id="bpmEventsCheckbox"/> Combine bpmEvents</label><br>
+                <label title="Probably rotation events for 360 degree levels"><input checked type="checkbox" id="rotationEventsCheckbox"/> Combine rotationEvents</label><br>
+                <label title="Notes"><input checked type="checkbox" id="colorNotesCheckbox"/> Combine colorNotes</label><br>
+                <label title="Bombs"><input checked type="checkbox" id="bombNotesCheckbox"/> Combine bombNotes</label>
+            </div>
+            <div>
+                <h2 style="opacity: 0">hello there :)</h2>
+                <label title="Walls/obstacles"><input checked type="checkbox" id="obstaclesCheckbox"/> Combine obstacles</label><br>
+                <label title="Arcs"><input checked type="checkbox" id="slidersCheckbox"/> Combine sliders</label><br>
+                <label title="Sliders"><input checked type="checkbox" id="burstSlidersCheckbox"/> Combine burstSliders</label><br>
+                <label title="idk what these are"><input checked type="checkbox" id="waypointsCheckbox"/> Combine waypoints</label><br>
+                <label title="v3 light stuff I think"><input checked type="checkbox" id="basicBeatmapEventsCheckbox"/> Combine basicBeatmapEvents</label>
+            </div>
+            <div>
+                <h2 style="opacity: 0">hello there :)</h2>
+                <label title="v3 light stuff I think"><input checked type="checkbox" id="colorBoostBeatmapEventsCheckbox"/> Combine colorBoostBeatmapEvents</label><br>
+                <label title="v3 light stuff I think"><input checked type="checkbox" id="lightColorEventBoxGroupsCheckbox"/> Combine lightColorEventBoxGroups</label><br>
+                <label title="v3 light stuff I think"><input checked type="checkbox" id="lightRotationEventBoxGroupsCheckbox"/> Combine lightRotationEventBoxGroups</label><br>
+                <label title="v3 light stuff I think"><input checked type="checkbox" id="basicEventTypesWithKeywordsCheckbox"/> Combine basicEventTypesWithKeywords</label>
+            </div>
+            <div>
+                <h2>V2 Settings:</h2>
+                <label title="I'm dumb so there's currently no way to merge customData, you can only override it. Inlcudes things like bookmarks and Noodle/Chroma stuff"><input checked type="checkbox" id="_customDataCheckbox"/> Override _customData</label><br>
+                <label title="Lighting events"><input checked type="checkbox" id="_eventsCheckbox"/> Combine _events</label><br>
+                <label title="Notes and bombs"><input checked type="checkbox" id="_notesCheckbox"/> Combine _notes</label><br>
+                <label title="Walls/obstacles"><input checked type="checkbox" id="_obstaclesCheckbox"/> Combine _obstacles</label><br>
+                <label title="Still have no idea what these are"><input checked type="checkbox" id="_waypointsCheckbox"/> Combine _waypoints</label>
+            </div>
+        </div>
+        <pre id="error-box"></pre><br>
+        <center><button onclick="combineMaps()">Combine difficulties</button></center>
+        
+      </body>
+</html>
