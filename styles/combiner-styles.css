@@ -50,3 +50,15 @@ button {
     font-size: 20px;
     padding: 5px 10px
 }
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #131719;
+        color: #e8e8e8;
+    }
+    #middle-arrow {
+        filter: invert(1)
+    }
+    .file-inside {
+        background: #1b2022;
+    }
+}
