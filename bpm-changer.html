@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BS Map BPM Changer</title>
+    <meta name="description" content="Mapped to the wrong BPM? Use this tool to change the mapping to a different BPM while staying on time. Made by Lekrkoekj.">
+    <script src="/scripts/bs-bpm-changer-script.js"></script>
+    <link rel="stylesheet" href="/styles/bpm-changer-styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Righteous&family=Secular+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <h1>Beat Saber Map BPM Changer</h1>
+</header>
+<main>
+    <div>
+        <label>Original difficulty: <input id="fileInput" type="file" name="file" onchange="readFile()" accept=".dat,.json,.txt"/></label>
+        <pre id="fileContent"></pre>
+        <hr>
+    </div>
+    <div>
+        <label>Original BPM: <input oninput="originalBpm = this.value" type="number" id="originalBpm"></label>
+        <br>
+        <br>
+        <label>Target BPM: <input oninput="targetBpm = this.value" type="number" id="targetBpm"></label>
+    </div>
+    <br>
+    <button onclick="convertBpm()">Change BPM</button>
+</main>
+</body>
+</html>

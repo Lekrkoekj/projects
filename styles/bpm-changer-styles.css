@@ -1,0 +1,17 @@
+body {
+    font-family: "Secular One";
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+button, input {
+    font-family: Righteous;
+}
+h1 {
+    font-weight: bold;
+}
+main {
+    max-width: 1280px;
+    wid
+}
